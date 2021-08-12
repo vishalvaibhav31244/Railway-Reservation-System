@@ -1,0 +1,45 @@
+<mat-card id="card" style="text-align: center;">
+<div>
+    <mat-form-field color="warn" appearance="legacy">
+        <mat-label>From</mat-label>
+        <mat-select #selectedFrom>
+        <mat-option value="PNBE">Patna</mat-option>
+        <mat-option value="HJP">Hajipur</mat-option>
+        <mat-option value="DNR">Danapur</mat-option>
+        </mat-select>
+    </mat-form-field>
+ 
+<mat-form-field color="warn" appearance="legacy">
+<mat-label>To</mat-label>
+<mat-select #selectedTo>
+<mat-option value="BZA">Vijayawada</mat-option>
+<mat-option value="SBC">Ksr Bengaluru</mat-option>
+<mat-option value="VSKP">VISAKHAPATNAM</mat-option>
+</mat-select>
+</mat-form-field>
+</div>
+<diV>
+<mat-form-field color="warn" appearance="legacy">
+<mat-label>Journey Date</mat-label>
+<input matInput [matDatepicker]="picker1">
+<mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+<mat-datepicker #picker1></mat-datepicker>
+</mat-form-field>
+    
+    
+<mat-form-field color="warn" appearance="legacy">
+<mat-label>Ticket Type</mat-label>
+<mat-select #selectedType>
+<mat-option value="GEN">GENERAL</mat-option>
+<mat-option value="RSV">RESERVED</mat-option>
+<mat-option value="VIP">SPECIAL KOTA</mat-option>
+</mat-select>
+</mat-form-field>
+</diV>
+<br>
+<button mat-raised-button color="primary" (click)="searchTrain()">SEARCH TRAINS</button>
+    
+    
+<router-outlet></router-outlet>
+</mat-card>
+    

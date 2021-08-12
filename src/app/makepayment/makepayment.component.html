@@ -1,0 +1,54 @@
+<mat-card id="card" style="text-align: center;">
+<div class="example-container">
+    <mat-form-field color="warn" appearance="legacy">
+        <mat-label>Payers Name</mat-label>
+        <input matInput placeholder="name"> 
+      </mat-form-field>
+    <br>
+    <mat-form-field color="warn" appearance="legacy">
+    <mat-label>Select Bank</mat-label>
+    <mat-icon matSuffix>account_balance</mat-icon>
+    <input matInput placeholder="bankname"> 
+    </mat-form-field>
+    <br>
+    <mat-form-field color="warn" appearance="legacy">
+    <mat-label>Name On card</mat-label>
+    <input matInput placeholder="name on card"> 
+    </mat-form-field>
+    <br>
+    <mat-form-field color="warn" appearance="legacy">
+    <mat-label>Card number</mat-label>
+    <input matInput placeholder="card no."> 
+    </mat-form-field>
+    <br>
+    <mat-form-field color="warn" appearance="legacy">
+    <mat-label>Enter Amount</mat-label>
+
+    <input matInput placeholder="amount"> 
+    </mat-form-field>
+    <br>
+    <mat-form-field color="warn" appearance="legacy">
+    <mat-label>CVV code</mat-label>
+    <input matInput placeholder="code on backof card "> 
+    </mat-form-field>
+    <br>
+    <mat-form-field color="warn" appearance="legacy">
+        <mat-label>Card Expiry</mat-label>
+        <input matInput placeholder="expiry date"> 
+        <input matInput [matDatepicker]="picker1">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+    
+    
+   
+    <br>
+    <section class="example-section">
+    <mat-checkbox class="example-margin">I Accept The terms<br> and Conditions</mat-checkbox>
+    </section><br>
+</div>
+    
+<button mat-raised-button color="primary" (click)="Submit()">Submit</button>
+ 
+</mat-card>
+      

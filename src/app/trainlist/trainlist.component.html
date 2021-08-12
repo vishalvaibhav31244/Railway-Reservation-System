@@ -1,0 +1,44 @@
+<mat-table [dataSource]="trains" class="mat-elevation-z8">
+    <ng-container matColumnDef="TrainNo">
+    <mat-header-cell *matHeaderCellDef> TrainNo </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.TrainNo}} </mat-cell>
+    </ng-container>
+    
+    
+    <ng-container matColumnDef="Trainname">
+    <mat-header-cell *matHeaderCellDef> Train name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.Trainname}} </mat-cell>
+    </ng-container>
+    
+    
+    <ng-container matColumnDef="From">
+    <mat-header-cell *matHeaderCellDef> Train From </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.From}} </mat-cell>
+    </ng-container>
+    
+    
+    <ng-container matColumnDef="To">
+    <mat-header-cell *matHeaderCellDef> Train To </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.To}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Depart">
+        <mat-header-cell *matHeaderCellDef> Depart </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Depart}} </mat-cell>
+        </ng-container>
+        
+        
+        <ng-container matColumnDef="Arrival">
+        <mat-header-cell *matHeaderCellDef> Arrival</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Arrival}} </mat-cell>
+        </ng-container>
+        
+<ng-container matColumnDef="Availability">
+    <mat-header-cell *matHeaderCellDef> Availability </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.Availability}} </mat-cell>
+</ng-container>
+        
+        
+<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+        
